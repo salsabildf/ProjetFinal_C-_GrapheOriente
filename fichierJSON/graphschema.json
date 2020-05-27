@@ -1,0 +1,144 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/SchemaGraphe",
+    "definitions": {
+        "SchemaGraphe": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "etiquette": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "listeS": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Liste"
+                    }
+                },
+                "listeA": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ListeA"
+                    }
+                }
+            },
+            "required": [
+                "etiquette",
+                "listeA",
+                "listeS",
+                "path"
+            ],
+            "title": "SchemaGraphe"
+        },
+        "ListeA": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "etiquette": {
+                    "type": "string"
+                },
+                "IDdepart": {
+                    "type": "integer"
+                },
+                "IDarrive": {
+                    "type": "integer"
+                },
+                "AChargeUtile": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ChargeUtile"
+                    }
+                }
+            },
+            "required": [
+                "AChargeUtile",
+                "IDarrive",
+                "IDdepart",
+                "etiquette",
+                "id"
+            ],
+            "title": "ListeA"
+        },
+        "ChargeUtile": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "mot": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "integer"
+                },
+                "Valeur_reel": {
+                    "type": "number"
+                },
+                "Valeur_entiere": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "mot",
+                "type"
+            ],
+            "title": "ChargeUtile"
+        },
+        "Liste": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "x": {
+                    "type": "integer"
+                },
+                "y": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "etiquette": {
+                    "type": "string"
+                },
+                "vecArc": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/VecArc"
+                    }
+                },
+                "SChargeUtile": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/ChargeUtile"
+                    }
+                }
+            },
+            "required": [
+                "SChargeUtile",
+                "etiquette",
+                "id",
+                "vecArc",
+                "x",
+                "y"
+            ],
+            "title": "Liste"
+        },
+        "VecArc": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "Tab": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "Tab"
+            ],
+            "title": "VecArc"
+        }
+    }
+}

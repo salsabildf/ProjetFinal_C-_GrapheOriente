@@ -1,0 +1,97 @@
+{
+    "etiquette": "graphe0",
+    "path": "../fichierJSON/G0.json",
+    "listeS": [
+        {
+            "x": 0,
+            "y": 0,
+            "id": 0,
+            "etiquette": "sommet0",
+            "vecArc": [
+                {
+                    "Tab": 1
+                },
+                {
+                    "Tab": 4
+                }
+            ],
+            "SChargeUtile": [
+                {
+                    "mot": "poid1",
+                    "type": 1,
+                    "Valeur_reel": 10.1
+                },
+                {
+                    "mot": "poid2",
+                    "type": 0,
+                    "Valeur_entiere": 144
+                }
+            ]
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "id": 1,
+            "etiquette": "1",
+            "vecArc": [
+                {
+                    "Tab": 2
+                }
+            ],
+            "SChargeUtile": []
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "id": 2,
+            "etiquette": "2",
+            "vecArc": [
+                {
+                    "Tab": 3
+                }
+            ],
+            "SChargeUtile": []
+        }
+    ],
+    "listeA": [
+        {
+            "id": 1,
+            "etiquette": "Arc1",
+            "IDdepart": 0,
+            "IDarrive": 1,
+            "AChargeUtile": [
+                {
+                    "mot": "poid1",
+                    "type": 1,
+                    "Valeur_reel": 10.1
+                },
+                {
+                    "mot": "poid2",
+                    "type": 0,
+                    "Valeur_entiere": 144
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "etiquette": "2",
+            "IDdepart": 1,
+            "IDarrive": 2,
+            "AChargeUtile": []
+        },
+        {
+            "id": 3,
+            "etiquette": "3",
+            "IDdepart": 2,
+            "IDarrive": 0,
+            "AChargeUtile": []
+        },
+        {
+            "id": 4,
+            "etiquette": "4",
+            "IDdepart": 0,
+            "IDarrive": 2,
+            "AChargeUtile": []
+        }
+    ]
+}
